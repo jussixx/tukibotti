@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ohjattu demo-chatbotti</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="widget" aria-label="Ohjattu chatbotti">
+      <header class="widget__header">
+        <div class="brand">
+          <div class="brand__dot" aria-hidden="true"></div>
+          <div class="brand__text">
+            <div class="brand__title">Pieksämäen koulu, tukibotti (demo)</div>
+            <div class="brand__subtitle">Klikkaa, mistä tarvitset apua</div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button
+            id="btnReset"
+            class="controlBtn controlBtn--primary"
+            type="button"
+            title="Aloita alusta"
+          >
+            ⟲ Aloita alusta
+          </button>
+        </div>
+      </header>
+
+      <section class="widget__path" aria-label="Valintapolku">
+        <span class="path__label">Polku:</span>
+        <span id="pathText" class="path__text">Etusivu</span>
+      </section>
+
+      <section class="widget__chat" aria-label="Keskustelu">
+        <div
+          id="messages"
+          class="messages"
+          aria-live="polite"
+          aria-relevant="additions"
+        ></div>
+      </section>
+
+      <footer class="widget__footer" aria-label="Valinnat">
+        <div id="choices" class="choices"></div>
+        <div class="hint">
+          Valitse vaihtoehto. Linkit avautuvat uuteen välilehteen.
+        </div>
+        <div class="footerNav">
+          <button
+            id="btnBackBottom"
+            class="controlBtn controlBtn--backBottom"
+            type="button"
+          >
+            ← Takaisin
+          </button>
+        </div>
+      </footer>
+    </main>
+
+    <script src="botti.js" defer></script>
+  </body>
+</html>

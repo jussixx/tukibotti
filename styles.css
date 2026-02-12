@@ -1,0 +1,341 @@
+:root {
+  --accent: #145f6b;
+  --base: #142126;
+
+  --bg: #0f1618;
+  --panel: #121c1f;
+  --panel2: #0c1214;
+
+  --text: #e7f0f1;
+  --muted: #b6c7ca;
+
+  --border: rgba(231, 240, 241, 0.12);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  --radius: 16px;
+  --radius2: 12px;
+  --gap: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background:
+    radial-gradient(
+      1200px 800px at 20% 0%,
+      rgba(20, 95, 107, 0.2),
+      transparent 55%
+    ),
+    radial-gradient(
+      900px 700px at 85% 10%,
+      rgba(20, 33, 38, 0.4),
+      transparent 60%
+    ),
+    var(--bg);
+  color: var(--text);
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    "Apple Color Emoji",
+    "Segoe UI Emoji";
+}
+
+.widget {
+  width: min(520px, 96vw);
+  height: min(720px, 92vh);
+  margin: 16px auto;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 28, 31, 0.98),
+    rgba(12, 18, 20, 0.98)
+  );
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.widget__header {
+  padding: 14px 14px 10px 14px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(
+    180deg,
+    rgba(18, 28, 31, 1),
+    rgba(18, 28, 31, 0.65)
+  );
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.brand__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 6px rgba(20, 95, 107, 0.2);
+}
+
+.brand__title {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.brand__subtitle {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.controlBtn {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  transition:
+    transform 0.06s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.controlBtn:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(231, 240, 241, 0.18);
+}
+
+.controlBtn:active {
+  transform: translateY(1px);
+}
+
+.controlBtn--primary {
+  border-color: rgba(20, 95, 107, 0.55);
+  background: rgba(20, 95, 107, 0.2);
+}
+
+.controlBtn--primary:hover {
+  background: rgba(20, 95, 107, 0.28);
+}
+
+.controlBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.widget__path {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.path__label {
+  opacity: 0.9;
+}
+.path__text {
+  color: var(--text);
+  font-weight: 600;
+  opacity: 0.92;
+}
+
+.widget__chat {
+  padding: 14px;
+  overflow: auto;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.msg {
+  max-width: 92%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius2);
+  line-height: 1.35;
+  font-size: 14px;
+}
+
+.msg--bot {
+  background: rgba(255, 255, 255, 0.035);
+  align-self: flex-start;
+}
+
+.msg--user {
+  background: rgba(20, 95, 107, 0.18);
+  border-color: rgba(20, 95, 107, 0.35);
+  align-self: flex-end;
+}
+
+.msg__meta {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.cardLink {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(20, 95, 107, 0.35);
+  background: rgba(20, 95, 107, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cardLink__text {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.cardLink__btn {
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid rgba(20, 95, 107, 0.55);
+  background: rgba(20, 95, 107, 0.22);
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.cardLink__btn:hover {
+  background: rgba(20, 95, 107, 0.3);
+}
+
+.widget__footer {
+  border-top: 1px solid var(--border);
+  background: linear-gradient(0deg, rgba(18, 28, 31, 1), rgba(18, 28, 31, 0.6));
+  padding: 12px 14px 14px 14px;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.choiceBtn {
+  appearance: none;
+  border: 1px solid rgba(231, 240, 241, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  transition:
+    transform 0.06s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.choiceBtn:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(231, 240, 241, 0.2);
+}
+
+.choiceBtn:active {
+  transform: translateY(1px);
+}
+
+.choiceBtn--accent {
+  border-color: rgba(20, 95, 107, 0.55);
+  background: rgba(20, 95, 107, 0.16);
+
+  .choiceBtn--accent:hover {
+    background: rgba(20, 95, 107, 0.24);
+  }
+
+  .hint {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+}
+/* Korostettu Takaisin-nappi */
+.controlBtn--back {
+  background: linear-gradient(135deg, #145f6b, #1b7a88);
+  border-color: #1fa3b6;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.controlBtn--back:hover {
+  background: linear-gradient(135deg, #1b7a88, #2496a8);
+}
+
+.controlBtn--back:disabled {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.5);
+}
+.footerNav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.controlBtn--backBottom {
+  width: 100%;
+  justify-content: center;
+  font-weight: 700;
+  border-color: rgba(20, 95, 107, 0.55);
+  background: rgba(20, 95, 107, 0.22);
+}
+
+.controlBtn--backBottom:hover {
+  background: rgba(20, 95, 107, 0.3);
+}
+
+@media (max-height: 620px) {
+  .widget {
+    height: 94vh;
+  }
+}
+/* Klikatun valinnan pysyvä tila */
+.choiceBtn--active {
+  border-color: #ff9a3c;
+  background: rgba(255, 154, 60, 0.22);
+  color: #ffffff;
+}
+
+.choiceBtn--active:hover {
+  background: rgba(255, 154, 60, 0.3);
+}
+
+.choiceBtn--active:focus-visible {
+  outline: 3px solid rgba(255, 154, 60, 0.5);
+  outline-offset: 2px;
+}

@@ -14,7 +14,7 @@
    ========================= */
 const LINKS = {
   ohjelmointi_vlk5_sisallot:
-    "https://sites.google.com/d/1piFANPNP5Si0Z3igSdJK_LRfjOG8UdG_/p/1ki1p_3JeuHsKZCqpE3-_Fkblr7oleaHN/edit",
+    "https://sites.google.com/d/1piFANPNP5Si0Z3igSdJK_LRfjOG8UdG_/p/1imiSGd2Y6ymRa0Fgk9-DcgvpziTUt_Xb/edit",
   ohjelmointi_tuntisuunnitelmat:
     "https://sites.google.com/d/1piFANPNP5Si0Z3igSdJK_LRfjOG8UdG_/p/1YFA_TbgdMfjnsuE4ka6wAvUJ0vCRLjYX/edit",
   yhteystiedot:
